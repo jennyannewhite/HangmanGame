@@ -1,44 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 
 <head>
-    <title>JS Hangman Game</title>
-
-    <!-- Bootstrap compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    <meta charset="UTF-8">
+    <title>Play this fruity hangman!</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
 
+    <div class="masthead">
+        <img class="milkyway" img src="assets/images/milky_way.jpg">
+        <h1>Fruity Hangman</h1>
+        <h2>Press any key to get started!</h2>
+    </div>
 
-    <div class="panel panel-default" style="max-width:400px;margin-left:auto; margin-right:auto; margin-top:100px;">
-        <div class="panel-body text-center">
+    <div class="wrapper">
+        <p id="wins"></p>
+        <p id="losses"></p>
+        <p id="currentword"></p>
+        <p id="guessesLeft"></p>
+        <p id="lettersGuessed"></p>
+    </div>
 
-
-            <h1> Solve this puzzle!</h1>
-            <div class="panel-body text-left">
-
-                <!--•	PseudoCode: Hangman
-•	Computer presents word with spaces in place of the letters.
-•	Player guesses letters
-•	When they answer correctly (or when they guess one of the letters) the computer fills in the corresponding letter
-•	When they answer incorrectly, the computer logs the wrong letter on the screen so the user can see it, and then takes away one of their chances
-•	The player gets 15 chances/guesses to get the word correct
-•	The title of the page should give a hint as to the type of word the player is guessing i.e. rock n roll bands etc.-->
-
-                <Container=left justified>
-                    <p>Guesses to go: <span id="guesses-left"></span></p>
-                    <p>Wrong Guesses: <span id="wrong-guesses"></span></p>
-                    <p>Player Wins: <span id="win-counter"></span></p>
-                    <p>Player Losses: <span id="loss-counter"></span></p>
-                    <h3 id="word-blank"></h3>
-
-                    <script src="./assets/javascript/game.js"></script>
-
-            </div>
-        </div>
-
+    <!--Linking javascript-->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 
 </html>
