@@ -1,9 +1,6 @@
-// GLOBAL VARIABLES (Accessible by all functions)
-// ==================================================================================================
-
 // Array of Word Options (all lowercase)
-var wordsList = ["jerome", "neena", "darion", "lou", "greg", "jordan",
-    "jasmine", "stephen", "jacob", "adam", "rui", "luis"
+var wordsList = ["persimmon", "pear", "banana", "passionfruit", "lemon", "raspberry",
+    "blackberry", "peach", "apple", "dragonfruit", "grape", "watermelon"
 ];
 // Solution will be held here.
 var chosenWord = "";
@@ -21,12 +18,6 @@ var winCounter = 0;
 var lossCounter = 0;
 var numGuesses = 9;
 
-// FUNCTIONS (These are bits of code that we will call upon to run when needed)
-// =========================================================================================
-
-// startGame()
-// Its how we we will start and restart the game.
-// (Note: It's not being run here. It's just being made for future use.)
 function startGame() {
     // Reset the guesses back to 0.
     numGuesses = 9;
@@ -41,13 +32,10 @@ function startGame() {
     // We print the solution in console (for testing).
     console.log(chosenWord);
 
-    // CRITICAL LINE - Here we *reset* the guess and success array at each round.
     blanksAndSuccesses = [];
-    // CRITICAL LINE - Here we *reset* the wrong guesses from the previous round.
+
     wrongGuesses = [];
 
-    // Fill up the blanksAndSuccesses list with appropriate number of blanks.
-    // This is based on number of letters in solution.
     for (var i = 0; i < numBlanks; i++) {
         blanksAndSuccesses.push("_");
     }
@@ -66,9 +54,6 @@ function startGame() {
     document.getElementById("wrong-guesses").innerHTML = wrongGuesses.join(" ");
 }
 
-// checkLettesr() function
-// It's where we will do all of the comparisons for matches.
-// Again, it's not being called here. It's just being made for future use.
 function checkLetters(letter) {
 
     // This boolean will be toggled based on whether or not a user letter is found anywhere in the word.
@@ -109,7 +94,7 @@ function checkLetters(letter) {
 // Here we will have all of the code that needs to be run after each guess is made
 function roundComplete() {
 
-    // First, log an initial status update in the console telling us how many wins, losses, and guesses are left.
+
     console.log("WinCount: " + winCounter + " | LossCount: " + lossCounter + " | NumGuesses: " + numGuesses);
 
     // Update the HTML to reflect the new number of guesses. Also update the correct guesses.
@@ -145,10 +130,6 @@ function roundComplete() {
 
 }
 
-// MAIN PROCESS (THIS IS THE CODE THAT CONTROLS WHAT IS ACTUALLY RUN)
-// ==================================================================================================
-
-// Starts the Game by running the startGame() function
 startGame();
 
 // Then initiate the function for capturing key clicks.
